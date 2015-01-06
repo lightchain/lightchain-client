@@ -5,7 +5,7 @@ app.factory('MongoDB', function ($mongolabResourceHttp) {
     return $mongolabResourceHttp('I changed angular-mongolab.js, use Project.collection instead, see below');
 });
 
-angular.module('rp').service('$MongoDB', ['$rootScope', 'MongoDB', '$connection_status', function ($scope, MongoDB, $connection_status) {
+app.service('$MongoDB', ['$rootScope', 'MongoDB', '$connection_status', function ($scope, MongoDB, $connection_status) {
   
   
     if(typeof $scope.userBlob.data.basicincome_co !== "undefined"){
@@ -17,20 +17,20 @@ angular.module('rp').service('$MongoDB', ['$rootScope', 'MongoDB', '$connection_
     /**
      * Add a currency
      */
-    this.create = function ()
+    this.create = function (rateOfReturn)
     {
-      var basicincome_co = {
-        currency: "RES",
-        taxRate: 0.02
+      var lightchain = {
+        currency: "Credit",
+        rate: rateOfReturn
       };
      
 
       // Add an element
-      $scope.userBlob.unshift("/basicincome_co", basicincome_co);
+      $scope.userBlob.unshift("/lightchain", lightchain);
 
       MongoDB.collection($scope.userBlob.data.account_id)
       var passport = {type:"passport", network: "BitNation"}
-      var contract = {type: "contract", currency: basicincome_co.currency, taxRate: basicincome_co.taxRate}
+      var contract = {type: "contract", currency: lightchain.currency, taxRate: lightchain.rate}
 
       new MongoDB(passport).$save().then(function (data) {
             console.log(data);
@@ -55,7 +55,7 @@ angular.module('rp').service('$MongoDB', ['$rootScope', 'MongoDB', '$connection_
   this.remove = function (currency) {
         
         // Update blob
-        $scope.userBlob.unset('/basicincome_co');
+        $scope.userBlob.unset('/lightchain');
         
         
         // remove from MongoDB
@@ -90,7 +90,7 @@ angular.module('rp').service('$MongoDB', ['$rootScope', 'MongoDB', '$connection_
 this.delete_everything = function (currency) {
         
         // Update blob
-        $scope.userBlob.unset('/basicincome_co');
+        $scope.userBlob.unset('/lightchain');
         
         
         // remove from MongoDB
