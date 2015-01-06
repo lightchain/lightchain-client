@@ -32,16 +32,11 @@
 		<div class="row">
 		<h2 class="pull-left">Notifications</h2> 
 		</div>
-		<div class="row pull-left" id="notifications_list">
-			<label><input ng-click="convert()" type="checkbox" />Convert to Base Unit Automatically</label>
-			<label><input ng-click="showbalance()" type="checkbox"/>Show Balance</label>
-			<label><input ng-click="trade()" type="checkbox"/>Disable Trade</label>
-			<label><input ng-click="coinjoin()" type="checkbox"/>Disable Coinjoin</label>
-
+		<div class="row" id="notifications_list">
+			<label class="col-md-6"><input ng-click="convert()" type="checkbox" />Convert to Base Unit Automatically</label>
+			<label class="col-md-6 text-center"><input ng-click="showbalance()" type="checkbox"/>Show Balance</label>
 		</div>
-		<div class="row">
-		<h2 class="pull-left">Wallets</h2> 
-		</div>
+		<h2>Wallet</h2> 
 		<div class="row">
 			<div class="settingsfileupload"><span>Import Wallet</span><input class="upload" ng-click="importWallet()" type="file" id="file" name="file"/></div>
 			<input type="button" ng-click="backupWallet()" value="Backup Wallet">

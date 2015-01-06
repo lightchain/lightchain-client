@@ -53,18 +53,16 @@
 
 <div class="col-md-12">
 	<input id = "fileUpload" ng-show="false" type="file" />
-    <div class="col-md-6 text-center">
+    <div class="col-md-12">
       <!--<div class="fileupload"><i class="fa fa-upload"></i><span>Import Addresses</span><input class="upload" type="file" id="file" name="file" ng-click="import()"/></div>-->
 
-       <button  ng-click="invest()"><i class="fa fa-upload"></i>Invest</button>
+       <button  ng-click="invest()"><span class="col-md-6 text-center"><i class="fa fa-upload"></i>Invest</span>/<span class="col-md-4 text-center"><i class="fa fa-download"></i>Divest</span></button>
 
     </div>
     <!--<div class="col-md-4 text-center">
       <button  ng-click="generateAddress()">Generate New Address</button>
     </div>-->
-    <div class="col-md-6 text-center">
-       <button  ng-click="divest()"><i class="fa fa-download"></i>Divest</button>
-    </div>
+
 </div>
 <div class="col-md-6 text-center">
     <span>You currently have 0.00000000 BTC invested.</span>
