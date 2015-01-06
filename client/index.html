@@ -1,48 +1,45 @@
 <html ng-app = "light" ng-controller="AppCtrl">
-<head>
-        
-        <!-- css files are rendered in order they were registered -->
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/layout.css">
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.4/toaster.css" rel="stylesheet" />    
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<head>     
+<!-- css files are rendered in order they were registered -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/layout.css">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.4/toaster.css" rel="stylesheet" />    
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <script type="text/javascript" src="js/lib/angular.js"></script>
-        <script type="text/javascript" src="js/lib/angular-route.js"></script>
-        <script type="text/javascript" src="js/lib/angular-bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/lib/angular-spinner.js"></script>
-        <script type="text/javascript" src="js/lib/angular-mongolab.js"></script>
+<script type="text/javascript" src="js/lib/angular.js"></script>
+<script type="text/javascript" src="js/lib/angular-route.js"></script>
+<script type="text/javascript" src="js/lib/angular-bootstrap.min.js"></script>
+<script type="text/javascript" src="js/lib/angular-spinner.js"></script>
+<script type="text/javascript" src="js/lib/angular-mongolab.js"></script>
+<script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
 
-        
-        <script src="http://code.angularjs.org/1.2.0/angular-animate.min.js" ></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.4/toaster.js"></script>
+<script src="http://code.angularjs.org/1.2.0/angular-animate.min.js" ></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.4/toaster.js"></script>
 
-        <script type="text/javascript" src="js/lib/ripple-0.9.2.js"></script>
+<script type="text/javascript" src="js/lib/ripple-0.9.2.js"></script>
 
 
-        <script type="text/javascript" src="js/controllers/main.js"></script>
-        <script type="text/javascript" src="js/controllers/login.js"></script>
-        
-        
-        <!-- Angular UI BootStrap -->
-        <script type="text/javascript" src="js/controllers/connect_modal.js"></script>
-        <script type="text/javascript" src="js/controllers/login_modal.js"></script>
-        <script type="text/javascript" src="js/services/network.js"></script>
-        <script type="text/javascript" src="js/services/vaultclient.js"></script>
- 
+<script type="text/javascript" src="js/controllers/main.js"></script>
+<script type="text/javascript" src="js/controllers/login.js"></script>
+
+
+<!-- Angular UI BootStrap -->
+<script type="text/javascript" src="js/controllers/connect_modal.js"></script>
+<script type="text/javascript" src="js/controllers/login_modal.js"></script>
+<script type="text/javascript" src="js/controllers/settings.js"></script>
+
+<script type="text/javascript" src="js/directives/validation.js"></script>
+
+<script type="text/javascript" src="js/model/wallet.js"></script>
+
+<script type="text/javascript" src="js/services/network.js"></script>
+<script type="text/javascript" src="js/services/vaultclient.js"></script>
+<script type="text/javascript" src="js/services/walletmanager.js"></script>
+<script type="text/javascript" src="js/services/storage.js"></script>
+<script type="text/javascript" src="js/services/BlockchainInfo.js"></script>
 
 </head>      
-
-
-<body >
-    
+<body >  
 <div  ng-view></div>
-  
-  
-  
-
-       </body> 
-       
-
-
+</body> 
 </html>

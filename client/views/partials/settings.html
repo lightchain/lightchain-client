@@ -1,4 +1,4 @@
-
+<div ng-controller="SettingsController">
 <div class="block-area" id="settings">
 	<form name="form" class="col-md-4 form-group">
 		<div class="row">
@@ -51,14 +51,4 @@
 	<div class="col-md-2">	
 	</div>
 </div>
-
-<div class="barrel" id="wallet_list" ng-show="showWallets">
-	<button id="barrel_button" class="row" ng-click="showWallets = !showWallets">
-	 <i class="fa fa-arrow-left"></i> Back
-	</button>
-	<div id="wallet_list_list">
-		<div class="animate-repeat" ng-repeat="wallet in wallets">
-			<button id="wallet_name"  ng-click="removeWallet(wallet)">{{wallet.Name}}</button>
-		</div>
-	</div>
 </div>

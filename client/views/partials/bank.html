@@ -1,59 +1,55 @@
 <div class="secondary-stat">
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <div id="secondary-stat-item1" class="secondary-stat-item big-number-stat clearfix">
-                            <div class="data">
-                              <span class="col-left big-number">260</span>
-                              <span class="col-right">
-                                <em>Gateways Net Worth</em>
-                                <em>3% <i class="fa fa-caret-down"></i></em>
-                              </span>
-                            </div>
-                            <div id="spark-stat1" class="inlinesparkline"><canvas width="304" height="60" style="display: inline-block; vertical-align: top; width: 304px; height: 60px;"></canvas></div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div id="secondary-stat-item2" class="secondary-stat-item big-number-stat clearfix">
-                            <p class="data">
-                              <span class="col-left big-number">$23,000</span>
-                              <span class="col-right">
-                                <em>Current Revenue</em>
-                                <em>5% <i class="fa fa-caret-up"></i></em>
-                              </span>
-                            </p>
-                            <div id="spark-stat2" class="inlinesparkline"><canvas width="304" height="60" style="display: inline-block; vertical-align: top; width: 304px; height: 60px;"></canvas></div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div id="secondary-stat-item3" class="secondary-stat-item big-number-stat clearfix">
-                            <p class="data">
-                              <span class="col-left big-number">$47,000</span>
-                              <span class="col-right">
-                                <em>Total Profit</em>
-                                <em>7% <i class="fa fa-caret-up"></i></em>
-                              </span>
-                            </p>
-                            <div id="spark-stat3" class="inlinesparkline"><canvas width="304" height="60" style="display: inline-block; vertical-align: top; width: 304px; height: 60px;"></canvas></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+<div class="row">
+  <div class="col-lg-4">
+    <div id="secondary-stat-item1" class="secondary-stat-item big-number-stat clearfix">
+      <div class="data">
+        <span class="col-left big-number">260</span>
+        <span class="col-right">
+          <em>Gateways Net Worth</em>
+          <em>3% <i class="fa fa-caret-down"></i></em>
+        </span>
+      </div>
+      <div id="spark-stat1" class="inlinesparkline"><canvas width="304" height="60" style="display: inline-block; vertical-align: top; width: 304px; height: 60px;"></canvas></div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div id="secondary-stat-item2" class="secondary-stat-item big-number-stat clearfix">
+      <p class="data">
+        <span class="col-left big-number">$23,000</span>
+        <span class="col-right">
+          <em>Current Revenue</em>
+          <em>5% <i class="fa fa-caret-up"></i></em>
+        </span>
+      </p>
+      <div id="spark-stat2" class="inlinesparkline"><canvas width="304" height="60" style="display: inline-block; vertical-align: top; width: 304px; height: 60px;"></canvas></div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div id="secondary-stat-item3" class="secondary-stat-item big-number-stat clearfix">
+      <p class="data">
+        <span class="col-left big-number">$47,000</span>
+        <span class="col-right">
+          <em>Total Profit</em>
+          <em>7% <i class="fa fa-caret-up"></i></em>
+        </span>
+      </p>
+      <div id="spark-stat3" class="inlinesparkline"><canvas width="304" height="60" style="display: inline-block; vertical-align: top; width: 304px; height: 60px;"></canvas></div>
+    </div>
+  </div>
+</div>
+</div>
 
 <div id="current-address" class="ng-scope">
-
-  <div class="h3 text-center">
-
-      <span class="label label-grey square col-md-offset-1">
-
-        <strong style="color:#000;">YOUR CURRENT ADDRESS:</strong>
-      </span>
-    </div>
-    <p class="lead text-center" id="current-address">
-
-	  <div qr-code class="col-md-2 col-md-offset-5" ></div>
-      <p  class="col-md-2 col-md-offset-4" >{{currentAddress}}</p>
-    </p>  
+<div class="h3 text-center">
+   <span class="label label-grey square col-md-offset-1">
+      <strong style="color:#000;">YOUR CURRENT ADDRESS:</strong>
+    </span>
   </div>
+  <p class="lead text-center" id="current-address">
+  <div qr-code class="col-md-2 col-md-offset-5" ></div>
+    <p  class="col-md-2 col-md-offset-4" >{{currentAddress}}</p>
+  </p>  
+</div>
 
 <div class="col-md-12">
 	<input id = "fileUpload" ng-show="false" type="file" />
