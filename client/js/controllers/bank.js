@@ -1,8 +1,8 @@
 "use strict";
-app.controller("HomeController", ["$scope", "$rootScope", "Blockchaininfo", "DecentralStorage", "Encryption", "modals","Session", "Security", "Wallet", "WalletManager",
-function($scope,$rootScope, Blockchaininfo,DecentralStorage, Encryption, modals, Session, Security, Wallet, WalletManager) {
+app.controller("BankController", ["$scope", "$rootScope", "Blockchaininfo", "LocalStorage", "Encryption", "modals","Session", "Security", "Wallet", "WalletManager",
+function($scope,$rootScope, Blockchaininfo,LocalStorage, Encryption, modals, Session, Security, Wallet, WalletManager) {
 	
 
 
 
-}]);//end Home Controller	
+}]);//end Bank Controller	

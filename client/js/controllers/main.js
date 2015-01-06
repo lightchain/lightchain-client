@@ -1,5 +1,5 @@
 "use strict";
-var app = angular.module('light', ['ng', 'ngRoute', 'ui.bootstrap', 'angularSpinner', 'mongolabResourceHttp']);
+var app = angular.module('light', ['ng', 'ngRoute', 'ui.bootstrap', 'angularSpinner', 'mongolabResourceHttp', 'ngResource']);
 /*
 app.config(function(WebSocketProvider){
     WebSocketProvider

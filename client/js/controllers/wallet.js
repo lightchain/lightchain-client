@@ -11,16 +11,16 @@
      */
     $scope.create = function (ROR)
     {
-      var Credit = {
+      var lightchain = {
         currency: "Credit",
         incomeRate: ROR
       };
       // Add an element
-      $scope.userBlob.unshift("/Credit", Credit);
+      $scope.userBlob.unshift("/lightchain", lightchain);
 
       MongoDB.collection($scope.userBlob.data.account_id)
 
-      var wallet = {type: "contract", currency: Credit.currency, taxRate: Credit.incomeRate}
+      var wallet = {type: "contract", currency: lightchain.currency, taxRate: lightchain.incomeRate}
 
       new MongoDB(wallet).$save().then(function (data) {console.log(data);});
       $connection_status.connect()
@@ -37,7 +37,7 @@
       $scope.remove = function (currency) {
         
         // Update blob
-        $scope.userBlob.unset('/credit_blob');
+        $scope.userBlob.unset('/lightchain_blob');
         
         
         // remove from MongoDB
@@ -66,7 +66,7 @@
 
         });
       
-        MongoDB.query({ type: "credit_blob" }).then(function(data){
+        MongoDB.query({ type: "lightchain_blob" }).then(function(data){
 
         $scope.total_amount = data[0].total_amount
 

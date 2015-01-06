@@ -1,5 +1,5 @@
 "use strict";
-app.controller("HomeController", ["$scope", "$rootScope", "Blockchaininfo", "DecentralStorage", "Encryption", "modals","Session", "Security", "Wallet", "WalletManager",
+app.controller("WalletController", ["$scope", "$rootScope", "Blockchaininfo", "DecentralStorage", "Encryption", "modals","Session", "Security", "Wallet", "WalletManager",
 function($scope,$rootScope, Blockchaininfo,DecentralStorage, Encryption, modals, Session, Security, Wallet, WalletManager) {
 	
 	/*******************Home init*********************/
@@ -31,7 +31,6 @@ function($scope,$rootScope, Blockchaininfo,DecentralStorage, Encryption, modals,
 	updateBalance();
 	setInterval(updateBalance, 30000);
 	
-    /*******************Home init end*****************/
 	
 	/***
 	Helper function for download
