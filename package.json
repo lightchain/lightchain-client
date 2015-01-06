@@ -1,0 +1,9 @@
+{
+  "name": "Lightchain",
+  "description": "Decentralized Banking System",
+  "author": "Uwe Cerron",
+  "dependencies": {
+    "express": "latest",
+    "ripple-lib": "latest"
+  }
+}
