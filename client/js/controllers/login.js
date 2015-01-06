@@ -1,6 +1,6 @@
 "use strict";
-  app.controller('BlobCtrl', ['$rootScope', '$location', '$network', '$vaultClient',  'usSpinnerService', 'WebSocket', '$window',
-    function ($scope, $location, $network, $vaultClient, usSpinnerService, WebSocket, $window)
+  app.controller('BlobCtrl', ['$rootScope', '$location', '$network', '$vaultClient', 'WebSocket', '$window',
+    function ($scope, $location, $network, $vaultClient, WebSocket, $window)
   {
    
   // iframe width/height video on the login page
@@ -17,7 +17,7 @@
 
   function login(username, password){
     //$vaultClient.vaultClient.loginAndUnlock(username, password,  userBlob)//not sure what 3rd argument, device_id, is (vaultclient.js line 138)
-    $vaultClient.vaultClient.login(username, password, "basicincome.co",userBlob);
+    $vaultClient.vaultClient.login(username, password, "lightchain.co",userBlob);
 
     function userBlob(err, data) {
         

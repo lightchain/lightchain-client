@@ -30,7 +30,7 @@ function ($scope, $modal, $log) {
   // Please note that $modalInstance represents a modal window (instance) dependency.
   // It is not the same as the $modal service used above.
 
-app.controller('ModalInstanceCtrl2', function ($scope, $modalInstance, items, $MongoDB, $vaultClient, $pay_dividends, usSpinnerService) {
+app.controller('ModalInstanceCtrl2', function ($scope, $modalInstance, items, $MongoDB, $vaultClient, $pay_dividends) {
 
     $scope.items = items;
     $scope.selected = {
@@ -39,11 +39,9 @@ app.controller('ModalInstanceCtrl2', function ($scope, $modalInstance, items, $M
 
   $scope.ok = function () {
 
-        usSpinnerService.spin('spinner-2');
         $vaultClient.vaultClient.unlock(this.username, this.password, $scope.userBlob.encrypted_secret, secret_key);
         function secret_key(err, data){
           var secret = data.secret
-                  usSpinnerService.stop('spinner-2');
         console.log(secret)
         $pay_dividends.submit(secret)        
         }

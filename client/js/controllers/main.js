@@ -1,17 +1,17 @@
 "use strict";
-var app = angular.module('light', ['ng', 'ngRoute', 'ui.bootstrap', 'angularSpinner', 'mongolabResourceHttp', 'ngResource']);
-/*
+var app = angular.module('light', ['ng', 'ngRoute', 'ui.bootstrap','angular-websocket', 'mongolabResourceHttp', 'ngResource']);
+
 app.config(function(WebSocketProvider){
     WebSocketProvider
       .prefix('')
-      .uri('');
-  });*/
+      .uri('wss://localhost:8080/:443');
+  });
   
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/', {templateUrl: 'views/dashboard.html', controller: 'AppCtrl'}).
-      when('/wallet', {templateUrl: 'wallet.html', controller: 'WalletCtrl'}).
+      when('/', {templateUrl: 'views/login.html', controller: 'AppCtrl'}).
+      when('/wallet', {templateUrl: 'views/dashboard.html', controller: 'AppCtrl'}).
       when('/about', {templateUrl: 'about.html', controller: 'AppCtrl'}).
       otherwise({redirectTo: '/'
       });
@@ -21,7 +21,7 @@ app.config(['$routeProvider',
 
 // a factory for MongoLabs API
 
-//app.constant('MONGOLAB_CONFIG',{API_KEY:'_5sK-6UJIaR72iqjdI0lHAo7l90nA9yp', DB_NAME:'basicincome_co'});
+app.constant('MONGOLAB_CONFIG',{API_KEY:'61NBcxBNiYmYAh3FihmJaX4WDa03425W', DB_NAME:'lightchain'});
 
 
 app.controller('AppCtrl', ['$scope', '$network', '$vaultClient',
