@@ -34,7 +34,7 @@ app.controller('AppCtrl', ['$scope', '$network', '$vaultClient',
 
 
   $scope.logout = function(){
-    window.location.assign("http://basicincome.co")
+    window.location.assign("/");
   }
       
 

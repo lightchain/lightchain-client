@@ -37,7 +37,7 @@
       $scope.remove = function (currency) {
         
         // Update blob
-        $scope.userBlob.unset('/basicincome_co');
+        $scope.userBlob.unset('/credit_blob');
         
         
         // remove from MongoDB
