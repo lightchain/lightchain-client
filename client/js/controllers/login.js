@@ -8,9 +8,7 @@
   var w = angular.element($window);
 
    $scope.submit = function() {
-          
-       login(this.username,  this.password)
-
+       login(this.username,  this.password);
   }
 
 
@@ -20,27 +18,17 @@
     $vaultClient.vaultClient.login(username, password, "lightchain.co",userBlob);
 
     function userBlob(err, data) {
-        
-        console.log(data)
-      $scope.userBlob = data.blob
-      $scope.username = data.username
+      $scope.userBlob = data.blob;
+      $scope.username = data.username;
+      console.log($scope.userBlob);               
+      $location.path('/wallet');
 
-      //$scope.secret = data.secret
+      $scope.header_hidden = true;
+      $scope.navbar_visible = true;
+      $scope.$apply();
 
-      console.log($scope.userBlob)
-       
-                    
-                    
-            $location.path('/wallet')
-            $scope.header_hidden = true
-            $scope.navbar_visible = true
-
-                $scope.$apply();
-
-            $scope.$on('$routeChangeSuccess', function () { $scope.stopSpin() })
+      $scope.$on('$routeChangeSuccess', function () { console.log("success") });
     };//end blob_function()
-
-
   }//end login()
 
 

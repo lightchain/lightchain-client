@@ -1,7 +1,18 @@
 "use strict";
-app.controller("BankController", ["$scope", "$rootScope", "Blockchaininfo", "LocalStorage", "Encryption", "modals","Session", "Security", "Wallet", "WalletManager",
-function($scope,$rootScope, Blockchaininfo,LocalStorage, Encryption, modals, Session, Security, Wallet, WalletManager) {
+app.controller("BankController", ["$scope", "$rootScope", '$network', '$vaultClient',
+function($scope,$rootScope, $network, $vaultClient) {
 	
+	$scoperevenue;
+	$scope.totalProfit;
+	$scope.networth;
+	$scope.invested;
+	$scope.gateways;
+	$rootScope.network = $network;
+
+
+	$scope.update = function () {
+
+	}
 
 
 
