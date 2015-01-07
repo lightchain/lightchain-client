@@ -53,10 +53,10 @@
 
 <div class="col-md-12">
 	<input id = "fileUpload" ng-show="false" type="file" />
-    <div class="col-md-12">
+    <div ng-controller="bank_modalCtrl" class="col-md-12">
       <!--<div class="fileupload"><i class="fa fa-upload"></i><span>Import Addresses</span><input class="upload" type="file" id="file" name="file" ng-click="import()"/></div>-->
 
-       <button  ng-click="invest()"><span class="col-md-6 text-center"><i class="fa fa-upload"></i>Invest</span>/<span class="col-md-4 text-center"><i class="fa fa-download"></i>Divest</span></button>
+       <button class="custom_button" ng-click="open()"><span class="col-md-6 text-center"><i class="fa fa-upload"></i>Invest</span>/<span class="col-md-4 text-center"><i class="fa fa-download"></i>Divest</span></button>
 
     </div>
     <!--<div class="col-md-4 text-center">
@@ -70,3 +70,19 @@
 <div class="col-md-6 text-center">
     <span>You are supplying 0.000000% of the network's net worth.</span>
 </div>
+
+
+<!-- Example for modal button
+
+<div ng-controller="bank_modalCtrl">
+    <div class="connect-btc-container" style="  font-family: 'Sans-Serif';">
+
+<button ng-hide="connected" ng-click="open()" class="btn btn-submit btn-block btn-connect-btc">Connect Passport + Dividend % / IOU Contract</button>
+
+</div>
+</div>
+<div ng-show="connected">
+
+<button ng-show="connected" class="connected-btc btn btn-submit btn-block ">Connected :)</button>
+
+-->

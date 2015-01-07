@@ -1,4 +1,4 @@
-
+<div ng-controller="WalletCtrl">
 <div  id="current-address" class="ng-scope">
 
   <div class="h3 text-center">
@@ -20,13 +20,14 @@
     <div class="col-md-4 text-left">
       <!--<div class="fileupload"><i class="fa fa-upload"></i><span>Import Addresses</span><input class="upload" type="file" id="file" name="file" ng-click="import()"/></div>-->
 
-       <button  ng-click="import()"><i class="fa fa-upload"></i>Import Wallet</button>
+       <button class="custom_button" ng-click="import()"><i class="fa fa-upload"></i>Import Wallet</button>
 
     </div>
     <div class="col-md-4 text-center">
-      <button  ng-click="generateAddress()">Generate New Address</button>
+      <button class="custom_button" ng-click="generateAddress()">Generate New Address</button>
     </div>
     <div class="col-md-4 text-right">
-       <button  ng-click="backup()"><i class="fa fa-download"></i>Backup Wallet</button>
+       <button  class="custom_button" ng-click="backup()"><i class="fa fa-download"></i>Backup Wallet</button>
     </div>
+</div>
 </div>
