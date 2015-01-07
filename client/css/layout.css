@@ -152,18 +152,7 @@ login.html
   color:#fff;
 }
 
-.modal-content{
-  text-align: center;
-
-}
-
-#modal_button{
-width: 45%;
-padding: 1rem;
-margin-bottom: 1.4rem;
-border-radius: 0.2rem;
-}
-input,button {
+input,.custom_button {
   width: 100%;
   margin-bottom: 1.4rem;
   padding: 1rem;
