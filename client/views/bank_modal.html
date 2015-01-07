@@ -1,0 +1,35 @@
+<div class="modal-body" >
+   <div class="invest mono">
+	<h2>Invest</h2>
+	<div class="box"><p>Lend some of your <span id="inv_balance">0.10450563</span> CLAM balance to the site for use as bankroll.</p><p>You get any gains the site makes (minus a 10% commission on net profits), but you also take any losses.</p><div class="pad"><div class="fleft pad">Increase investment? <input id="invest_input"> CLAM </div><div id="invest_auth" class="fleft pad" style="display: none;">Google Auth:<input id="invest_code">
+	</div>
+	<div class="fleft pad">
+	<button id="invest_button">invest</button></div>
+	<div class="fleft pad"> ... or invest your whole balance: <button id="invest_all">invest all</button></div>
+	<div class="clear"></div><div id="invest_error"></div></div>
+	</div>
+	<br>
+	<h2>Divest</h2>
+
+	<div class="box">
+
+	<div>Google tells me that 'divest' is the opposite of 'invest'.  It's for getting your investment back into your balance.</div>
+
+	<div class="pad">
+		<div class="fleft pad">Reduce investment? <input id="divest_input"> CLAM </div><div id="divest_auth" class="fleft pad" style="display: none;">Google Auth:<input id="divest_code"></div>
+
+		<div class="fleft pad">
+		<button id="divest_button">divest</button>
+		</div>
+
+		<div class="fleft pad"> ... or divest your whole investment: <button id="divest_all">divest all</button></div><div class="clear"></div><div id="divest_error"></div>
+	</div>
+
+	</div><div class="fleft indent"><p>You currently have <span class="investment">0.00000000</span> CLAM invested.</p></div><div class="fright rindent"><p>You are supplying <span class="invest_pct">0.000000%</span> of the site's bankroll.</p></div><div class="clear"></div>
+	</div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">Ok</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
