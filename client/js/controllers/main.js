@@ -4,7 +4,7 @@ var app = angular.module('light', ['ng', 'ngRoute', 'ui.bootstrap','angular-webs
 app.config(function(WebSocketProvider){
     WebSocketProvider
       .prefix('')
-      .uri('wss://localhost:8080/:443');
+      .uri('wss://lightchain-41774.onmodulus.net/:443');
   });
   
 app.config(['$routeProvider',
