@@ -171,12 +171,5 @@ app.service("LocalStorage", function($location) {
 
 });
 
-   // Decentralstorage.remove();
-    //chrome.storage.local.remove("cache");
-//console.log(value)
-
-   // var module = angular.module("movieModels");
-    //module.value("Movie", Movie);
- 
 
 

@@ -8,10 +8,10 @@ app.factory('MongoDB', function ($mongolabResourceHttp) {
 app.service('$MongoDB', ['$rootScope', 'MongoDB', '$connection_status', function ($scope, MongoDB, $connection_status) {
   
   
-    if(typeof $scope.userBlob.data.basicincome_co !== "undefined"){
-    $scope.connected = true
+    if(typeof $scope.userBlob.data.lightchain !== "undefined"){
+    $scope.connected = true;
     }
-    else $scope.connected = false
+    else {$scope.connected = false;}
     
     
     /**
@@ -28,9 +28,9 @@ app.service('$MongoDB', ['$rootScope', 'MongoDB', '$connection_status', function
       // Add an element
       $scope.userBlob.unshift("/lightchain", lightchain);
 
-      MongoDB.collection($scope.userBlob.data.account_id)
-      var passport = {type:"passport", network: "BitNation"}
-      var contract = {type: "contract", currency: lightchain.currency, taxRate: lightchain.rate}
+      MongoDB.collection($scope.userBlob.data.account_id);
+      var passport = {type:"passport", network: "BitNation"};
+      var contract = {type: "contract", currency: lightchain.currency, taxRate: lightchain.rate};
 
       new MongoDB(passport).$save().then(function (data) {
             console.log(data);
@@ -41,7 +41,7 @@ app.service('$MongoDB', ['$rootScope', 'MongoDB', '$connection_status', function
       });
 
 
-    $connection_status.connect()
+    $connection_status.connect();
       
       
     };
@@ -59,31 +59,31 @@ app.service('$MongoDB', ['$rootScope', 'MongoDB', '$connection_status', function
         
         
         // remove from MongoDB
-        MongoDB.collection($scope.userBlob.data.account_id)
+        MongoDB.collection($scope.userBlob.data.account_id);
                 
                 //remove passport    
             MongoDB.query({type: "passport"}).then(function(data){
                       
-            var temp = data
-            var id
-            id = temp[0]._id
+            var temp = data;
+            var id;
+            id = temp[0]._id;
             
-            MongoDB.remove_one(id)
+            MongoDB.remove_one(id);
   
           })
                     
             //remove contract        
           MongoDB.query({type: "contract"}).then(function(data){
                       
-            var temp = data
-            var id
-            id = temp[0]._id
+            var temp = data;
+            var id;
+            id = temp[0]._id;
             
-            MongoDB.remove_one(id)
+            MongoDB.remove_one(id);
   
           })
                
-        $connection_status.disconnect()
+        $connection_status.disconnect();
   }
         
 
@@ -115,15 +115,15 @@ this.delete_everything = function (currency) {
             //remove contract        
           MongoDB.query({type: "contract"}).then(function(data){
                       
-            var temp = data
-            var id
-            id = temp[0]._id
+            var temp = data;
+            var id;
+            id = temp[0]._id;
             
-            MongoDB.remove_one(id)
+            MongoDB.remove_one(id);
   
         })
                 
-    $connection_status.disconnect()
+    $connection_status.disconnect();
 }
         
 

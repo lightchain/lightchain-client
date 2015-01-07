@@ -1,5 +1,5 @@
 "use strict";
-app.factory("Wallet",["Blockchaininfo","LocalStorage",function(Blockchaininfo,LocalStorage){
+app.factory("Wallet",["Blockchaininfo","LocalStorage" , "Bitcoin",function(Blockchaininfo,LocalStorage, Bitcoin){
 
 
 	var Wallet = function(Name) {
@@ -81,6 +81,11 @@ app.factory("Wallet",["Blockchaininfo","LocalStorage",function(Blockchaininfo,Lo
 		this.getBalance = function() {
 			return this.Balance;
 		};
+
+		Wallet.prototype.generatePublicAddress = function(passphrase) {
+			var key = Bitcoin.generateTestnetAddress();
+			return key;
+		}
 
 }
 return Wallet;

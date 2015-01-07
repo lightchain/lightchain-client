@@ -13,7 +13,7 @@ app.service('$connection_status', ['$rootScope', function($scope)
 
 	this.check = function(){
 
-		if(typeof $scope.userBlob.data.basicincome_co !== "undefined"){
+		if(typeof $scope.userBlob.data.lightchain !== "undefined"){
 		$scope.connected = true
 		}
 		else $scope.connected = false
